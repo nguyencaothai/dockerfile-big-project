@@ -84,6 +84,11 @@ RUN git clone https://github.com/Tuhinshubhra/CMSeeK.git
 WORKDIR /root/python_tool/CMSeeK
 RUN pip install -r requirements.txt
 
+# Install google-chrome-stable
+WORKDIR /root/python_tool/screenshot_tool/
+RUN apt-get install -f ./google-chrome-stable_current_amd64.deb
+RUN pip install selenium
+
 # Run api-server 
 WORKDIR /root/python_tool/
 CMD python api.py
