@@ -8,7 +8,6 @@ RUN git clone https://github.com/hieumh/frontend_wappalyzer_tool.git
 RUN npm install -g nodemon
 
 WORKDIR /root/wappalyzer/src/drivers/npm/
-RUN mkdir images
 RUN yarn add puppeteer
 RUN npm install
 
